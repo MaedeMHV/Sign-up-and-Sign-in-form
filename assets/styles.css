@@ -1,0 +1,268 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #f8f9fa, #ecf2fd, #e4ebff, #e0e2ff, #e0d8ff);
+    height: 100vh;   
+    overflow: hidden; 
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+ background-size: cover;
+ background-position: center;
+ transition: all 3s ease;
+ filter: blur(40px);
+ background-image: linear-gradient(to bottom, #f8f9fa, #e2eeff, #dbdeff, #e4caff, #f8b2ff);
+}
+
+.wrapper{
+    position: absolute;
+    width: 900px;
+    height: 550px;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: rgba(15, 15, 15, 0.273) 0px 3px 8px;
+    z-index: 30;
+}
+
+.toggle{
+    width: 100px;
+    height: 40px;
+    border-radius: 25px;
+    background: rgba(235, 205, 253, 0.467);
+    border: 0;
+    box-shadow: none;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    top:70px;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.053) 0px 1px 3px, rgba(36, 36, 36, 0.185) 0px 1px 2px;
+    font-size: 12px;
+    gap:3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #8a33c5;
+    font-weight: 900;
+}
+.toggle .circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.916);
+    box-shadow: rgba(62, 62, 62, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.2) 0px 30px 60px -30px, rgba(10, 37, 64, 0.2) 0px -2px 6px 0px inset;
+}
+.signUp_toggle{
+    right: 30px; 
+    padding-right: 5px;
+}
+
+.signIn_toggle{
+    left: 30px; 
+    padding-right: 7px;
+}
+
+/* sign Up */
+
+.signUp,
+.signIn{
+    
+    width: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    position: relative;
+    transition: all 1s ease-in-out ;
+
+   
+}
+
+ 
+.signUp.show,
+.signIn.show{
+    width: 100%; 
+    transition: all 1s ease-in-out ;
+   
+}
+/* sign in */
+
+
+.ImgSec{
+    width: 65%;
+    padding: 0;
+    height: 550px;
+    background-position: center;
+    object-fit: contain;
+  object-position: bottom;
+    background-size: contain;
+
+}
+.signUp .signSec,
+.signIn .signSec{
+
+    transition: all 0s linear;
+    opacity: 0;
+}
+
+
+
+
+.signUp.show .signSec,
+.signIn.show .signSec{
+    width: 35%;
+    height: 550px;
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ 
+    transition: all 0s linear ;
+    opacity: 1;
+
+}
+
+.signUp .signSec form,
+.signIn .signSec form{
+    transition: all 0s linear ;
+    opacity: 0;
+}
+
+
+.signUp.show .signSec form,
+.signIn.show .signSec form{
+    width: 350px;
+    height: 500px;
+    display: flex;
+    padding-left: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 0;
+    font-size: 14px;
+    transition: all 0.5s linear 1s;
+    opacity: 1;
+}
+.signIn h2,
+.signUp h2{
+   
+    font-size: 30px;
+    color: #8a33c5;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 900;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+   
+    }
+    
+        .signSec form input{
+            width: 290px;
+            height: 30px;
+        margin-bottom: 12px;
+        margin-top: 2px;
+        border-radius: 10px;
+        border: solid 1px rgb(197, 196, 196);
+            
+        
+   }
+   .signSec form label{
+        font-size: 14px;
+        color: rgb(34, 34, 34);
+        padding-bottom: 5px;
+   }
+
+
+
+
+   .signSec form .submit{
+    width: 300px;
+    border: 0;
+    height: 40px ;
+    color: aliceblue;
+    font-weight: 600;
+    background-color: rgb(99, 34, 160);
+    margin-top: 15px;
+   }
+   .signSec form p{
+      
+    font-size: 12px;
+    padding-right: 40px;
+    margin-top: 20px;
+
+
+   }
+   .signSec form .btn{
+    border: solid 1px rgb(197, 196, 196);
+    width: 300px;
+    height: 40px ;
+    font-weight: 400;
+    color: #4b4b4b;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 4px;
+   border-radius: 10px;
+   
+   }
+   @media (max-width: 800px)  {
+    .wrapper{
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+    }
+    .signUp,
+    .signIn{
+     display: flex;
+     flex-direction: column;
+     justify-content:space-evenly;
+     align-items: center;
+     padding: 0;
+
+   }
+   .ImgSec{
+    height: 300px !important;
+    width: 100vw !important;
+   }
+   .signSec{
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   }
+  .signIn_toggle{
+    top: 140px;
+   left: 150px !important; 
+   
+}
+.signUp_toggle{
+    top: 95px;
+    right: -10px; 
+}
+
+}
+@media (min-width: 600px) and (max-width: 850px) {
+    .signIn_toggle{
+        top: 140px;
+       left: 200px !important; 
+       
+    }
+    .signUp_toggle{
+        top: 95px;
+        right: 20px; 
+}}
